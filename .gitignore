@@ -29,6 +29,7 @@ vm/
 val_set
 test_set
 train_set
+temp
 *.csv
 
 # PyInstaller
