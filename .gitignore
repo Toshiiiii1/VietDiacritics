@@ -30,6 +30,9 @@ val_set
 test_set
 train_set
 temp
+temp1
+temp3
+temp2
 *.csv
 
 # PyInstaller
