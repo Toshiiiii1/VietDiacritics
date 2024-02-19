@@ -26,16 +26,13 @@ share/python-wheels/
 *.egg
 MANIFEST
 vm/
-val_set
-test_set
-train_set
-temp
-temp1
-temp3
-temp2
+val_set*
+test_set*
+train_set*
+temp*
 *.csv
-5th.zip
-5th/
+[0-9]*/
+[0-9]*.zip
 
 # PyInstaller
 #  Usually these files are written by a python script from a template
