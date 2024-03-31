@@ -4,8 +4,19 @@ from typing import List
 import tensorflow as tf
 import numpy as np
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+# CORS handle
+origins = ["http://localhost:5173"]
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
 
 class InputText(BaseModel):
     text: str
@@ -29,7 +40,7 @@ def add_diacritics(text):
     result = tokenizer.decode(output[0], skip_special_tokens=True)
     return result
 
-@app.post("/add_diacritics/")
+@app.post("/api/add_diacritics/")
 def handle_add_diacritics(input_text: InputText):
     text = input_text.text
 
