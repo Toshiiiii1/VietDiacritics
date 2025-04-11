@@ -54,6 +54,8 @@ npm install
 npm run dev
 ```
 
+### [Video demo](https://drive.google.com/file/d/1zIfLvtkOJKvUmZoSn07qi7UIEOXQkkq6/view?usp=drive_link)
+
 ## Tổng quan
 ![Sơ đồ tổng quan](./images/general.png)
 
