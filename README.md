@@ -55,7 +55,7 @@ npm run dev
 ```
 
 ## Tổng quan
-![Sơ đồ tổng quan](images\general.png)
+![Sơ đồ tổng quan](./images/general.png)
 
 ## Thu thập dữ liệu
 
@@ -63,7 +63,7 @@ Nội dung các bài báo thể thao được thu thập từ các trang báo đ
 
 Tổng số bài báo thu thập được: 10,768.
 
-![Thu thập dữ liệu](images\crawl_data.png)
+![Thu thập dữ liệu](./images/crawl_data.png)
 
 ## Tiền xử lý dữ liệu
 
@@ -75,7 +75,7 @@ Tổng số bài báo thu thập được: 10,768.
 
 Các cặp câu không dấu - có dấu được phân chia vào các tập dữ liệu dưới dạng .csv
 
-![Dữ liệu sau tiền xử lý](images\preprocessed_data.png)
+![Dữ liệu sau tiền xử lý](./images/preprocessed_data.png)
 
 |  Set  | Total |
 |-----|-------|
