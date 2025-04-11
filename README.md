@@ -2,9 +2,9 @@
 
 Ứng dụng mô hình ngôn ngữ lớn trong việc tự động thêm dấu cho văn bản tiếng Việt không dấu
 
-# Quickstart
+## Quickstart
 
-## Demo với giao diện Streamlit
+### Demo với giao diện Streamlit
 
 1. Install
 
@@ -21,7 +21,7 @@ pip install -r requirements.txt
 python -m streamlit run demo.py
 ```
 
-## Chạy demo với giao diện web
+### Chạy demo với giao diện web
 
 1. Install
 
@@ -54,5 +54,31 @@ npm install
 npm run dev
 ```
 
-# Tổng quan
-- Thu thập nội dung các bải báo tiếng Việt về chủ đề thể thao, sau đó tiền xử lý dữ liệu và tạo các cặp câu tiếng Việt không dấu và câu tiếng Việt có dấu cho các tập dữ liệu. Sau đó thực hiện fine-tune mô hình ngôn ngữ ViT5 với tập dữ liệu đã được chuẩn bị để tạo ra mô hình tự động thêm dấu.
+## Tổng quan
+![Sơ đồ tổng quan](images\general.png)
+
+## Thu thập dữ liệu
+
+Nội dung các bài báo thể thao được thu thập từ các trang báo điện tử phổ biến ở Việt Nam qua RSS và bằng cách truy xuất trực tiếp từ trang web với Selenium và Beautiful Soup.
+
+Tổng số bài báo thu thập được: 10,768.
+
+![Thu thập dữ liệu](images\crawl_data.png)
+
+## Tiền xử lý dữ liệu
+
+- Chuẩn hóa Unicode.
+- Loại bỏ các ký tự đặc biệt, các đường dẫn.
+- Tách câu với thư viện Underthesea.
+- Bỏ dấu thanh ở mỗi câu.
+- Loại bỏ những câu trùng nhau, những câu quá ngắn (có số lượng từ nhỏ hơn 5).
+
+Các cặp câu không dấu - có dấu được phân chia vào các tập dữ liệu dưới dạng .csv
+
+![Dữ liệu sau tiền xử lý](images\preprocessed_data.png)
+
+|  Set  | Total |
+|-----|-------|
+| Train set    | 126,234  |
+| Val set | 6,556  |
+| Test set | 23,081  |
