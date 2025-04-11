@@ -39,7 +39,7 @@ pip install -r requirements.txt
 cd model_api/
 
 # Chạy backend
-uvicorn mainL:app --port 8000
+uvicorn main:app --port 8000
 ```
 
 3. Chạy frontend (ReactJS)
