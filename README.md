@@ -1,69 +1,95 @@
-# Tự động thêm dấu cho văn bản tiếng Việt không dấu
+# Automatically add diacritics to non-diacritic Vietnamese text
 
-Công cụ giúp tự động thêm dấu câu cho câu hoặc văn bản tiếng Việt không dấu.
+Tool to automatically add diacritics to non-diacritic Vietnamese sentences or text. Click [here](./docs/README.md) to see more details.
 
-## Tính năng chính
+## Features
 
-- Thêm dấu câu chính xác cho văn bản tiếng Việt.
-- API sẵn sàng tích hợp vào các ứng dụng khác.
-- Hỗ trợ cả văn bản dài và ngắn.
+- Automatically add diacritics to non-diacritic correctly.
+- Has API can be intergrated into other application.
+- Support short or long paragraph.
 
-## Sử dụng
+## Quickstart
 
-### Demo với giao diện Streamlit
+### Streamlit demo
 
-1. Cài đặt
+1. Installation
 
 ```bash
 # Clone repo
 git clone https://github.com/Toshiiiii1/VN_Seq2eq_with_Transformer.git
 
-# Tải các thư viện Python cần thiết
+# Start virtual eviroment
+python -m venv venv
+source venv/Scripts/activate
+
+# Check venv activate
+which python
+
+# Install required Python libraries
 pip install -r requirements.txt
 ```
 
-2. Chạy demo
+2. Start demo
 ```bash
+# Navigate to demo folder
+cd demo/
+
+# Start Streamlit demo
 python -m streamlit run demo.py
 ```
 
-### Chạy demo với giao diện web
+### Web interface demo
 
-1. Cài đặt
+1. Installation
 
 ```bash
 # Clone repo
 git clone https://github.com/Toshiiiii1/VN_Seq2eq_with_Transformer.git
 
-# Tải các thư viện Python cần thiết
+# Start virtual eviroment
+python -m venv venv
+source venv/Scripts/activate
+
+# Check venv activate
+which python
+
+# Install required Python libraries
 pip install -r requirements.txt
 ```
 
-2. Chạy backend (FastAPI)
+2. Start backend (FastAPI)
 ```bash
-# Di chuyển đến thư mục backend
-cd model_api/
+# Navigate to backend folder
+cd demo/model_api/
 
-# Chạy backend, url: http://localhost:8000
+# Start backend, url: http://localhost:8000
 uvicorn main:app --port 8000
 ```
 
-3. Chạy frontend (ReactJS)
+3. Start frontend (ReactJS)
 ```bash
-# Di chuyển đến thư mục frontend
-cd frontend/
+# Navigate to frontend folder
+cd demo/frontend/
 
-# Tải các thư viện cần thiết
+# Install required libraries
 npm install
 
-# Chạy frontend
+# Start frontend
 npm run dev
 ```
 
 ### [Video demo](https://drive.google.com/file/d/1zIfLvtkOJKvUmZoSn07qi7UIEOXQkkq6/view?usp=drive_link)
 
-## Công nghệ sử dụng
+## Technical details
 
-- Mô hình ngôn ngữ: ViT5 phiên bản Base 1024-length (98.5% độ chính xác).
+- Large language model: ViT5 Base 1024-length (98.5% accuracy).
 - Backend: FastAPI.
-- UI: ReactJS, Streamlit (demo nhanh)
+- UI: ReactJS, Streamlit.
+- Train model: HuggingFace.
+- Crawl data: Selenium, Beautiful Soup.
+- Preprocess text data: NLTK.
+
+## Acknowledgments
+- [VietAI](https://github.com/vietai/ViT5) for the excellent Vietnamese Large language model.
+- [FastAPI](https://fastapi.tiangolo.com/) for the excellent framework to build APIs.
+- [ReactJS](https://react.dev/) for the amazing framework.
