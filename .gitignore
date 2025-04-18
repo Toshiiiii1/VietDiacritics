@@ -26,11 +26,11 @@ share/python-wheels/
 *.egg
 MANIFEST
 vm/
-val_set*
-test_set*
-train_set*
+# val_set*
+# test_set*
+# train_set*
 temp*
-*.csv
+# *.csv
 [0-9]*/
 [0-9]*.zip
 

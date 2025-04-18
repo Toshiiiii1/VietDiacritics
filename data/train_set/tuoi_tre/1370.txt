@@ -1,0 +1,1 @@
+ Trước khi triển khai mô hình “đi chợ hộ”, các thành viên đã in ra số điện thoại từng người và số điện thoại, Zalo các cửa hàng, siêu thị… để người dân cần có thể gọi ngay. 

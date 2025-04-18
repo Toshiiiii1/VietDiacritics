@@ -59,9 +59,9 @@ if __name__ == "__main__":
     preprocess_text("test_set")
 
 
-    train_set = pd.read_csv("./train_set.csv").astype("str")
-    test_set = pd.read_csv("./test_set.csv").astype("str")
-    val_set = pd.read_csv("./val_set.csv").astype("str")
+    train_set = pd.read_csv("./train_set3.csv").astype("str")
+    test_set = pd.read_csv("./test_set3.csv").astype("str")
+    val_set = pd.read_csv("./val_set3.csv").astype("str")
 
 
     # Liệt kê số cặp câu trong mỗi tập và tổng số cặp câu
