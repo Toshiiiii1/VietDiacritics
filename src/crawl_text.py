@@ -6,6 +6,7 @@ import os
 from selenium import webdriver
 import time
 from tqdm import tqdm
+import newspaper
 
 # Tổng hợp các nguồn tin tức
 """
@@ -216,11 +217,13 @@ def crawl_text_in_main_page(news, path):
     driver.quit()
 
 if __name__ == "__main__":
-    crawl_text_from_rss(train_news, "./train_set/")
-    crawl_text_from_rss(test_news, "./test_set/")
-    crawl_text_from_rss(val_news, "./val_set/")
+    # crawl_text_from_rss(train_news, "./train_set/")
+    # crawl_text_from_rss(test_news, "./test_set/")
+    # crawl_text_from_rss(val_news, "./val_set/")
     
-    crawl_text_in_main_page(train_news, "./train_set/")
-    crawl_text_in_main_page(test_news, "./test_set/")
-    crawl_text_in_main_page(val_news, "./val_set/")
+    # crawl_text_in_main_page(train_news, "./train_set/")
+    # crawl_text_in_main_page(test_news, "./test_set/")
+    # crawl_text_in_main_page(val_news, "./val_set/")
 
+    article = newspaper.article("https://thethao247.vn/441-nhan-dinh-iraq-vs-han-quoc-co-hoi-den-tay-01h15-ngay-6-6-2025-d370282.html")
+    print(article.text)
