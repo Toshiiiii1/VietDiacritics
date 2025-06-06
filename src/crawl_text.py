@@ -225,5 +225,5 @@ if __name__ == "__main__":
     # crawl_text_in_main_page(test_news, "./test_set/")
     # crawl_text_in_main_page(val_news, "./val_set/")
 
-    article = newspaper.article("https://thethao247.vn/441-nhan-dinh-iraq-vs-han-quoc-co-hoi-den-tay-01h15-ngay-6-6-2025-d370282.html")
+    article = newspaper.article("https://dantri.com.vn/the-thao/noi-lo-lon-cua-hlv-kim-sang-sik-truoc-tran-quyet-chien-cua-tuyen-viet-nam-20250603203718932.htm")
     print(article.text)
