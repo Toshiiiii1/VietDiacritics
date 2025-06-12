@@ -33,9 +33,9 @@ def parse_opt():
     parser = argparse.ArgumentParser()
     
     parser.add_argument("--weight", type=str, default="", help="Pre-trained model weight")
-    parser.add_argument("--train-set", type=str, default="", help="Train data in VOC format")
-    parser.add_argument("--val-set", type=str, default="", help="Validation data in VOC format")
-    parser.add_argument("--output-path", type=str, default="", help="Validation data in VOC format")
+    parser.add_argument("--train-set", type=str, default="", help="Train data in CSV format")
+    parser.add_argument("--val-set", type=str, default="", help="Validation data in CSV format")
+    parser.add_argument("--output-path", type=str, default="", help="Output path")
     
     opt = parser.parse_args()
     
